@@ -293,7 +293,7 @@ void CCompositor::initServer(std::string socketName, int socketFd) {
     if (!m_pAqBackend->start()) {
         Debug::log(CRIT,
                    "m_pAqBackend couldn't start! This usually means aquamarine could not find a GPU or encountered some issues. Make sure you're running either on a tty or on a "
-                   "Wayland session, NOT an X11 one.");
+                   "Wayland session, NOT an Xorg/X11 one.");
         throwError("CBackend::create() failed!");
     }
 
